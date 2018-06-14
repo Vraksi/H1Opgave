@@ -10,7 +10,8 @@ namespace H1_opgave
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Du er gay");
+            
+            Console.WriteLine("dwada");
         }
     }
 }
