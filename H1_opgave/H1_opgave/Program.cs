@@ -12,6 +12,7 @@ namespace H1_opgave
         {
             Console.WriteLine("bette stift");
             Console.WriteLine("huaa");
+            Console.WriteLine("wuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah");
         }
     }
 }
