@@ -11,6 +11,7 @@ namespace H1_opgave
         static void Main(string[] args)
         {
             Console.WriteLine("bette stift");
+            Console.WriteLine("huaa");
         }
     }
 }
