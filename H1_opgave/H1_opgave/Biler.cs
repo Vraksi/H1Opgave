@@ -13,6 +13,7 @@ namespace H1_opgave
         private string _model;
         private string _brændstof;
         private int _km;
+        private int _oprettelse;
 
 
         public Biler()
@@ -20,7 +21,7 @@ namespace H1_opgave
 
         }
 
-        public Biler(int regnr, int årgang, string mærke, string model, string brændstof, int km)
+        public Biler(int regnr, int årgang, string mærke, string model, string brændstof, int km, int oprettelse)
         {
             _regnr = regnr;
             _årgang = årgang;
@@ -28,6 +29,7 @@ namespace H1_opgave
             _model = model;
             _brændstof = brændstof;
             _km = km;
+            _oprettelse = oprettelse;
         }
 
         
@@ -67,6 +69,9 @@ namespace H1_opgave
             get { return _km; }
             set { _km = value; }
         }
+
+        
+        
 
     }
 }

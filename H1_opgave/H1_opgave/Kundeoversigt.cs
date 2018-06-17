@@ -7,5 +7,6 @@ namespace H1_opgave
 {
     public class Kundeoversigt
     {
+        
     }
 }
