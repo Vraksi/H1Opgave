@@ -7,5 +7,8 @@ namespace H1_opgave
 {
     public class Kunde
     {
+        private int kundeid;
+        private string fuldnavn;
+        private string bil;
     }
 }
