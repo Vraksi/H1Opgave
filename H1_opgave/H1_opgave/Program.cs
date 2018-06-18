@@ -11,6 +11,7 @@ namespace H1_opgave
         static void Main(string[] args)
         {            
             Kunde Kunder = new Kunde();
+            Biler Bil = new Biler();            
             string svar;
             Console.WriteLine("Tryk på den tast for at starte");
             ConsoleKeyInfo info = Console.ReadKey();
@@ -21,7 +22,7 @@ namespace H1_opgave
                     "O for oprettelse af kunde, V for vise kunde oversigt, B for Biler, U for opdatering \n");            
             // vi laver en do while loop for at kunne komme ud af programmet når vi hvar lyst sammen samt blive i programmet til vi ikke gider mere
             do
-            {
+            {                
                 info = Console.ReadKey();
                 svar = Convert.ToString(info.KeyChar);
                 Console.WriteLine("O for oprettelse af kunde, V for vise kunde oversigt, B for Biler, U for opdatering \n");

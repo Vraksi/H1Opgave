@@ -30,8 +30,7 @@ namespace H1_opgave
             _brændstof = brændstof;
             _km = km;
             _oprettelse = oprettelse;
-        }
-
+        }        
         
 
         public int Regnr
