@@ -17,11 +17,10 @@ namespace H1_opgave
 
         }
 
-
         public void AddBiler()
         {
             Console.Clear();
-            Console.WriteLine("Hvad er bilens ID? ");
+            Console.WriteLine("Hvad er bilens ID?");
             _Biler.Add(Console.ReadLine());
             Console.WriteLine("Hvad er bilens Reg nr?");
             _Biler.Add(Console.ReadLine());
@@ -33,21 +32,15 @@ namespace H1_opgave
             _Biler.Add(Console.ReadLine());
             
 
-            string linje = String.Join(", ", _Biler.ToArray());
-            linje = linje + "\n";
-            File.AppendAllText("Bil.txt", linje, Encoding.Unicode);
+            string linje = String.Join(", ", _Biler.ToArray());            
+            File.AppendAllText("Bil.txt", linje + Environment.NewLine);
             Console.WriteLine(linje);
             Console.ReadKey();
             _Biler.Clear();
             Console.Clear();
             return;
         }
-
-        public void SletBil()
-        {
-
-        }
-
+     
         public void VisBil()
         {
             string strSøg;

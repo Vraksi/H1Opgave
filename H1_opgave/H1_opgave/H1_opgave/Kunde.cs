@@ -21,16 +21,14 @@ namespace H1_opgave
         
         public void VærkstedBesøg()
         {
-            Console.WriteLine("Hvad dato er begyndte værkstedet");
+            Console.WriteLine("\nHvad dato er begyndte værkstedet");
             _værkstedsbesøg.Add(Console.ReadLine());
             Console.WriteLine("Hvad blev der lavet på Værkstedet");
             _værkstedsbesøg.Add(Console.ReadLine());
             Console.WriteLine("Hvornår er vi færdige med den");
             _værkstedsbesøg.Add(Console.ReadLine());
-
-            string linje = String.Join(", ", _værkstedsbesøg.ToArray());
-            linje = linje + "\n";
-            File.AppendAllText("Værkstedsbesøg.txt", linje, Encoding.Unicode);
+            string linje = String.Join(", ", _værkstedsbesøg.ToArray());            
+            File.AppendAllText("Vearkstedsbesog.txt", linje + Environment.NewLine);
             Console.WriteLine(linje);
             Console.ReadKey();
             _værkstedsbesøg.Clear();
@@ -41,14 +39,15 @@ namespace H1_opgave
         public void AddKunder()
         {
             Console.Clear();
-            Console.WriteLine("Hans/huns Kundeid");
+            Console.WriteLine("Hans/huns Bil ID");
+            _Kunde.Add(Console.ReadLine());
+            Console.WriteLine("Hans/huns Kunde id");
             _Kunde.Add(Console.ReadLine());     
-            Console.WriteLine("Han/huns fulde   navn");
+            Console.WriteLine("Han/huns fulde navn");
             _Kunde.Add(Console.ReadLine());            
             Console.WriteLine("Oprettelses Dato");
             _Kunde.Add(Console.ReadLine());
-            Console.WriteLine("Hans/huns Bil ID");
-            _Kunde.Add(Console.ReadLine());
+            
 
             string linje = String.Join(", ", _Kunde.ToArray());            
             File.AppendAllText("Kunde.txt", linje + Environment.NewLine);
@@ -61,7 +60,7 @@ namespace H1_opgave
 
         public void VisKunde()
         {
-            String[] linier = File.ReadAllLines("Kunde.txt", Encoding.Unicode);
+            String[] linier = File.ReadAllLines("Kunde.txt");
             foreach (string indhold in linier)                              // her giver info til indhold og skriver det op
             {
                 Console.WriteLine(indhold);
@@ -80,8 +79,8 @@ namespace H1_opgave
         public void ViskundeBiler()
         {
             string strSøg;
-            String[] linier = File.ReadAllLines("Bil.txt", Encoding.Unicode);
-            String[] linjer = File.ReadAllLines("Kunde.txt", Encoding.Unicode);
+            String[] linier = File.ReadAllLines("Bil.txt" );
+            String[] linjer = File.ReadAllLines("Kunde.txt" );
             Console.Write("\nSkriv BilID du vil søge på \n");
             strSøg = Console.ReadLine();
             foreach (string linje in linier)
@@ -133,7 +132,7 @@ namespace H1_opgave
 
         public void Visværkstedsbesøg()
         {
-            String[] linier = File.ReadAllLines("Værkstedsbesøg.txt", Encoding.Unicode);
+            String[] linier = File.ReadAllLines("Vearkstedsbesog.txt" );
             foreach (string indhold in linier)                              // her giver info til indhold og skriver det op
             {
                 Console.WriteLine(indhold);

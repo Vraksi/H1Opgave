@@ -15,7 +15,7 @@ namespace H1_opgave
             Kunde Kunder = new Kunde();
             string svar;
             Console.WriteLine("Tryk på den tast for at starte");
-            ConsoleKeyInfo info = Console.ReadKey();
+            ConsoleKeyInfo info = Console.ReadKey(); 
             Console.Clear();
                        
             Console.WriteLine("Du er nu ankommet til Værkstedet hvad vil du gøre ");
@@ -26,24 +26,30 @@ namespace H1_opgave
                 Console.WriteLine("Du kan nu vælge hvad ud gerne vil gøre på værkstedet" +
                     "" +
                     "\n O for oprettelse af kunde, V for vise kunde oversigt, B for Biler, U for opdatering \n");
-                info = Console.ReadKey();
+                info = Console.ReadKey(); // For at konvertere det til readkey til en string
                 svar = Convert.ToString(info.KeyChar);                
                 // O for at oprette en kunde
                 if (svar == "o" || svar == "O")
                 {
-                    Console.WriteLine("vil du oprette en kunde eller vise kunden med alle de biler han har \n A for kunde + biler ellers O for Opret");
+                    Console.WriteLine("vil du oprette en kunde eller vise kunden med alle de biler han har \n A for kunde + biler ellers U for Opret");
                     info = Console.ReadKey();
                     svar = Convert.ToString(info.KeyChar);
                     Console.WriteLine("");
-                    if (svar == "O" || svar == "o");
+                    if (svar == "o" || svar == "O")
                     {
                         Kunder.AddKunder();
+                        Console.Clear();
                     }
-                    if (svar == "A" || svar == "a")
+                    else if (svar == "A" || svar == "a")
                     {
                         Kunder.ViskundeBiler();
+                        Console.Clear();
                     }
-                    
+                    else
+                    {
+                        svar = "";
+                        Console.Clear();
+                    }
                 }
 
                 // V for at vise vores kunde oversigt
@@ -56,22 +62,30 @@ namespace H1_opgave
                 if (svar == "B" || svar == "b")
                 {
                     Console.Clear();
-                    Console.WriteLine("Vil du oprette en bil eller opdatere" +
+                    Console.WriteLine("Vil du oprette en bil eller opdatere\n" +
                         "" +
-                        "U for opdatere, O for Opret, V for at vise en bil");
+                        " O for Opret, U for opdatere, V for at vise en bil");
                     info = Console.ReadKey();
                     svar = Convert.ToString(info.KeyChar);
                     if (svar == "U" || svar == "u")
                     {
                         bil.AddBiler();
+                        Console.Clear();
                     }
-                    if (svar == "O" || svar == "o")
+                    else if (svar == "O" || svar == "o")
                     {
                         bil.AddBiler();
+                        Console.Clear();
                     }
-                    if (svar == "V" || svar == "v")
+                    else if (svar == "V" || svar == "v")
                     {
                         bil.VisBil();
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        svar = "";
+                        Console.Clear();
                     }
                 }
 
@@ -85,11 +99,18 @@ namespace H1_opgave
                     if (svar == "O" || svar == "o")
                     {
                         Kunder.VærkstedBesøg();
+                        Console.Clear();
                     }
-                    if (svar == "v" || svar == "V")
+                    else if (svar == "v" || svar == "V")
                     {
                         Kunder.Visværkstedsbesøg();
-                    }                    
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        svar = "";
+                        Console.Clear();
+                    }
                 }
             } while (svar != "Q" || svar != "q");
         }        
