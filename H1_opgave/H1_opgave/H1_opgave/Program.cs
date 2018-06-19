@@ -23,7 +23,7 @@ namespace H1_opgave
             // vi laver en do while loop for at kunne komme ud af programmet når vi hvar lyst sammen samt blive i programmet til vi ikke gider mere
             do
             {                
-                Console.WriteLine("Du kan nu vælge hvad ud gerne vil gøre på værkstedet" +
+                Console.WriteLine("\nDu kan nu vælge hvad ud gerne vil gøre på værkstedet" +
                     "" +
                     "\n O for oprettelse af kunde, V for vise kunde oversigt, B for Biler, U for opdatering \n");
                 info = Console.ReadKey(); // For at konvertere det til readkey til en string

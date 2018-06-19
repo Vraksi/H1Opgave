@@ -11,7 +11,9 @@ namespace H1_opgave
     public class Biler
     {
 
+        //liste som vi brugter til at bevare input
         List<string> _Biler = new List<string>();
+        //En default constructor
         public Biler()
         {
 
@@ -19,6 +21,7 @@ namespace H1_opgave
 
         public void AddBiler()
         {
+            // vi tilføjer alt information ned til en "list" af strings
             Console.Clear();
             Console.WriteLine("Hvad er bilens ID?");
             _Biler.Add(Console.ReadLine());
@@ -30,8 +33,8 @@ namespace H1_opgave
             _Biler.Add(Console.ReadLine());
             Console.WriteLine("Hvilken type Brændstof bruges?");
             _Biler.Add(Console.ReadLine());
-            
 
+            //her kommaseperere vi det, og samler ned i vores "Bil.txt" fil. Da den ikke har nogen sti, så bruger den programmets placering som default
             string linje = String.Join(", ", _Biler.ToArray());            
             File.AppendAllText("Bil.txt", linje + Environment.NewLine);
             Console.WriteLine(linje);

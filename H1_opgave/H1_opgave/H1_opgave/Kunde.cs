@@ -21,12 +21,14 @@ namespace H1_opgave
         
         public void VærkstedBesøg()
         {
+            // vi tilføjer alt information ned til en "list" af strings
             Console.WriteLine("\nHvad dato er begyndte værkstedet");
             _værkstedsbesøg.Add(Console.ReadLine());
             Console.WriteLine("Hvad blev der lavet på Værkstedet");
             _værkstedsbesøg.Add(Console.ReadLine());
             Console.WriteLine("Hvornår er vi færdige med den");
             _værkstedsbesøg.Add(Console.ReadLine());
+            //stringsne bliver joined af kommaer - for at skabe et kommesepereret film
             string linje = String.Join(", ", _værkstedsbesøg.ToArray());            
             File.AppendAllText("Vearkstedsbesog.txt", linje + Environment.NewLine);
             Console.WriteLine(linje);
@@ -38,6 +40,7 @@ namespace H1_opgave
         
         public void AddKunder()
         {
+            // vi tilføjer alt information ned til en "list" af strings
             Console.Clear();
             Console.WriteLine("Hans/huns Bil ID");
             _Kunde.Add(Console.ReadLine());
@@ -47,8 +50,8 @@ namespace H1_opgave
             _Kunde.Add(Console.ReadLine());            
             Console.WriteLine("Oprettelses Dato");
             _Kunde.Add(Console.ReadLine());
-            
 
+            //stringsne bliver joined af kommaer - for at skabe et kommesepereret film
             string linje = String.Join(", ", _Kunde.ToArray());            
             File.AppendAllText("Kunde.txt", linje + Environment.NewLine);
             Console.WriteLine(linje);
